@@ -1,5 +1,6 @@
 body{    
- background-color: rgb(233, 18, 54);
+ background-image: url("../src/img/imgBG.jpg");
+ background-size:cover;
 }
 
 main{
