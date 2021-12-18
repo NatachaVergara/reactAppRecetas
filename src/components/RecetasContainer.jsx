@@ -5,22 +5,22 @@ import Api from '../Api/Api'
 import Header from './Header';
 
 
-export default function RecetasContainer() {    
+export default function RecetasContainer() {
     const [recetas, setRecetas] = useState([]);
     const [buscar, setBuscar] = useState('');
     const [query, setQuery] = useState('')
 
 
-    const getRecetas = () => {
-        Api({query, setRecetas})    
-
-    }
 
     useEffect(() => {
-        getRecetas()        
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        getRecetas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query])
 
+    const getRecetas = () => {
+        Api({ query, setRecetas })
+
+    }
 
     const updateBusqueda = e => {
         setBuscar(e.target.value)
@@ -28,10 +28,10 @@ export default function RecetasContainer() {
 
     const obtenerBusqueda = e => {
         e.preventDefault();
-        setQuery(buscar)       
+        setQuery(buscar)
         setBuscar('')
     }
-   
+
 
     return (
         <div>
@@ -40,7 +40,7 @@ export default function RecetasContainer() {
                 obtenerBusqueda={obtenerBusqueda}
                 value={buscar}
                 onChange={updateBusqueda}
-                
+
             />
             <main className="container-fluid mt-5 pt-5">
                 <div className="row row-cols-md-2">
@@ -50,7 +50,7 @@ export default function RecetasContainer() {
                             titulo={receta.recipe.label}
                             img={receta.recipe.image} tiempoCoccion={receta.recipe.totalTime}
                             ingredients={receta.recipe.ingredients} url={receta.recipe.url}
-                           
+
                         />
                     ))}
                 </div>

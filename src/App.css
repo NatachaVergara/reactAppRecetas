@@ -6,6 +6,17 @@ main{
     margin-bottom: 299px;
 }
 
+.card{
+    height:410px;
+    overflow-y: hidden;
+}
+
+.card:hover{
+    height:auto;
+    overflow-y:visible;
+}
+
+
 footer{
     height: 100%;
 }
