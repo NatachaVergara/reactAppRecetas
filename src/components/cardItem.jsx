@@ -11,10 +11,10 @@ const CuerpoReceta = ({ titulo, img, tiempoCoccion, ingredients, url, index }) =
     
 
         <div>
-            <div className="card card border-danger mb-3" key={index}>
+            <div className="card shadow mb-3" key={index}>
                 <h3 className="card-header text-center"> {titulo} </h3>
                 <div className="card-body align-self-center">
-                    <img src={img} alt="MDN" className="rounded-1 " style={{ width: "250px" }} />
+                    <img src={img} alt="MDN" className="rounded-1 " style={{ width: "200px" }} />
                 </div>
                 <h5 className="text-center">Ingredientes</h5>
                 <ol className="p-5 text-center list-unstyled">
@@ -23,9 +23,8 @@ const CuerpoReceta = ({ titulo, img, tiempoCoccion, ingredients, url, index }) =
                         <li>{ingredient.text} </li>
                     ))}
                 </ol>
-                <div className="card-body">
+                <div className="card-body align-self-center">
                     <a href={url} className="card-link text-decoration-none ">Ver pasos</a>
-
                 </div>
 
             </div>

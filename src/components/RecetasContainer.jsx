@@ -43,7 +43,7 @@ export default function RecetasContainer() {
 
             />
             <main className="container-fluid mt-5 pt-5">
-                <div className="row row-cols-md-2">
+                <div className="row row-cols-md-3 ">
                     {recetas.map((receta, index) => (
                         <CuerpoReceta
                             key={index}
