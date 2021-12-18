@@ -1,4 +1,22 @@
-.App{    
- 
+body{    
+ background-color: rgb(233, 18, 54);
 }
 
+main{
+    margin-bottom: 299px;
+}
+
+footer{
+    height: 100%;
+}
+
+footer .nav-link{
+    color: black!important
+}
+
+
+@media screen and (max-width: 400px) {
+    main{
+    margin-bottom: 200px;
+}
+}

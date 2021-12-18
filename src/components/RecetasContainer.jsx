@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-
-import CuerpoReceta from './CuerpoReceta';
+import '../App.css';
+import CuerpoReceta from './cardItem';
 import Api from '../Api/Api'
 import Header from './Header';
 
 
-export default function RecetasApp() {
-    
+export default function RecetasContainer() {    
     const [recetas, setRecetas] = useState([]);
     const [buscar, setBuscar] = useState('');
     const [query, setQuery] = useState('')
@@ -32,7 +31,7 @@ export default function RecetasApp() {
         setQuery(buscar)       
         setBuscar('')
     }
-
+   
 
     return (
         <div>
@@ -43,7 +42,7 @@ export default function RecetasApp() {
                 onChange={updateBusqueda}
                 
             />
-            <div className="container-fluid mt-5 pt-5">
+            <main className="container-fluid mt-5 pt-5">
                 <div className="row row-cols-md-2">
                     {recetas.map((receta, index) => (
                         <CuerpoReceta
@@ -55,7 +54,7 @@ export default function RecetasApp() {
                         />
                     ))}
                 </div>
-            </div>
+            </main>
         </div>
     )
 }

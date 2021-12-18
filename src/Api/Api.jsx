@@ -7,7 +7,7 @@ const Api = async ({ query, setRecetas}) => {
     const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=100`)
     const data = await res.json();
     setRecetas(data.hits)
-    console.log(data)      
+    console.log(data.hits)      
 
 
 
