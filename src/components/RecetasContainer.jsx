@@ -10,17 +10,17 @@ export default function RecetasContainer() {
     const [buscar, setBuscar] = useState('');
     const [query, setQuery] = useState('')
 
+    const getRecetas = async () => {
+        await Api({ query, setRecetas })
 
+    }
 
     useEffect(() => {
         getRecetas();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     }, [query])
 
-    const getRecetas = () => {
-        Api({ query, setRecetas })
-
-    }
+   
 
     const updateBusqueda = e => {
         setBuscar(e.target.value)
