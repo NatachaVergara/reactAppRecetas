@@ -12,7 +12,7 @@ const Footer = () => {
                 {/* <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">FAQs</a></li>
                 <li className="nav-item"><a href="#" className="nav-link px-2 text-muted">About</a></li> */}
             </ul>
-            <p className="text-center text-muted">© Natacha Vergara, {new Date().getFullYear()} </p>
+            <p className="text-center text-dark ">© Natacha Vergara, {new Date().getFullYear()} </p>
         </footer>
     )
 }
