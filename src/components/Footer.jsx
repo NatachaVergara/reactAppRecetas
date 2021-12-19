@@ -4,7 +4,7 @@ import '../App.css'
 
 const Footer = () => {
     return (
-        <footer className="py-3 my-4 container ">
+        <footer className="container ">
             <ul className="nav justify-content-center border-bottom pb-3 mb-3">
                 <li className="nav-item "><a href="https://nvergaraportfolio.netlify.app/" target="_blank" rel="noreferrer"   className="nav-link px-2 ">Potfolio</a></li>
                 <li className="nav-item"><a href="https://proyectosdejs.netlify.app/" target="_blank" rel="noreferrer" className="nav-link px-2">Proyectos JS</a></li>
